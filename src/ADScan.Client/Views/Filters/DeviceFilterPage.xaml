@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADScan.Client.Views.DeviceFilterPage">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+            <Image Source="logo.png" HeightRequest="50">
+            </Image>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" BorderColor="Black" CornerRadius="5" Margin="10,0,10,0">
+                <Label Text="Equipos Registrados" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Frame>
+            <ListView Grid.Row="1" x:Name="filterList"
+                      Footer=""
+                      Margin="10,0,0,0"
+                      ItemsSource="{Binding Filters, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="10,0,10,0">
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label HorizontalOptions="StartAndExpand" Text="{Binding Name}" FontAttributes="Bold" VerticalOptions="CenterAndExpand" />
+                                    <Label HorizontalOptions="StartAndExpand" Text="{Binding Mac}" FontAttributes="Bold" VerticalOptions="CenterAndExpand" />
+                                </StackLayout>                                
+                                <ImageButton HorizontalOptions="EndAndExpand" CommandParameter="{Binding Mac}"  Source="delete.png" HeightRequest="50" Clicked="DeleteItem"></ImageButton>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Grid.Row="2" x:Name="btnAdd" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Text="AGREGAR FILTRO"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

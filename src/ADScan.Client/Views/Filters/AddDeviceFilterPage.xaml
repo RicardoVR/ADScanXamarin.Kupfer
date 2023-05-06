@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ADScan.Client.Views.AddDeviceFilterPage">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+            <Image Source="logo.png" HeightRequest="50">
+            </Image>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout Margin="5,10,5,0">
+            <Label Text="UUID del Equipo" Margin="10,0,0,0" FontSize="15" HorizontalOptions="CenterAndExpand" />            
+            <Entry x:Name="txtMac" HorizontalOptions="FillAndExpand" Placeholder="(aa:bb:cc:dd:ee:ff)"/>
+            <Label Text="Nombre del Equipo" Margin="10,0,0,0" FontSize="15" HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="txtName" HorizontalOptions="FillAndExpand" Placeholder="Nombre"/>
+            <Button x:Name="btnAdd" Text="AGREGAR EQUIPO" VerticalOptions="EndAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

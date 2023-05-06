@@ -1,0 +1,100 @@
+﻿<ContentPage x:Class="ADScan.Client.DevicesList"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Title="ADScan Devices"
+             Visual="Material"
+             mc:Ignorable="d">
+     <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+            <Image Source="logo.png" HeightRequest="50">
+            </Image>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Filtros" Priority="1" Order="Secondary" Clicked="OnFiltersClicked" />
+        <ToolbarItem Text="Equipos" Priority="2" Order="Secondary" Clicked="OnDvcFiltersClicked"/>
+        <ToolbarItem x:Name="btnMassive" Text="Configuración Masiva" Priority="2" Order="Secondary" />
+        <ToolbarItem Text="Acerca..." Priority="3" Order="Secondary" />  
+    </ContentPage.ToolbarItems>
+    <Grid HorizontalOptions="FillAndExpand" Margin="5,0,5,0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" BackgroundColor="Black" ColumnSpacing="1" RowSpacing="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+             <StackLayout Margin="0,1,0,1" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightGray">
+                <Label Grid.Column="0" Text="Equipo" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="LightGray" />
+            </StackLayout>
+            <StackLayout Margin="0,1,0,1"  Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightGray">
+                <Label  Text="N°" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+             <StackLayout Margin="0,1,0,1"  Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightGray">
+                <Label Margin="5,0,5,0" Text="V1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+             <StackLayout Margin="0,1,0,1"  Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightGray">
+                <Label Margin="5,0,5,0" Text="V2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+             <StackLayout Margin="0,1,0,1"  Grid.Column="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightGray">
+                <Label Text="Desgaste mm" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <StackLayout Margin="0,1,0,1"  Grid.Column="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="LightGray">
+                <Label Text="Adv" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+
+
+        </Grid>
+        <ListView Grid.Row="1" x:Name="foundBleDevicesListView"
+                      Footer=""
+                      ItemsSource="{Binding Devices, Mode=TwoWay}"
+                      ItemTapped="FoundBluetoothDevicesListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                         <Grid HorizontalOptions="FillAndExpand" Margin="10,0,10,0">
+                             <Grid.ColumnDefinitions>
+                                 <ColumnDefinition Width="110" />
+                                 <ColumnDefinition Width="45" />
+                                 <ColumnDefinition Width="45" />
+                                 <ColumnDefinition Width="50" />
+                                 <ColumnDefinition Width="50" />
+                                 <ColumnDefinition Width="auto" />
+                             </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding Mac}" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="StartAndExpand" />
+                            <Label Grid.Column="1" Text="{Binding Number}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                            <Label Grid.Column="2" Text="{Binding V1}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                            <Label Grid.Column="3" Text="{Binding V2}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                            <Label Grid.Column="4" Text="{Binding MM}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                            <Label Grid.Column="5" Text="{Binding RAW_ADV}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Margin="10" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+            <Button x:Name="ScanButton"
+                    Clicked="ScanButton_Clicked"
+                    HorizontalOptions="Start"
+                    Text="Escanear" />
+             <Button x:Name="SendButton"
+                    Clicked="SendButton_Clicked"
+                     HorizontalOptions="EndAndExpand"
+                    Text="Enviar" />
+        </StackLayout>
+        <ActivityIndicator x:Name="IsBusyIndicator"
+                           Scale="0.3" />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ADScan.Client.Views.MassiveConfigValues">
+     <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+            <Image Source="logo.png" HeightRequest="50">
+            </Image>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <StackLayout Padding="10"
+                     Orientation="Vertical">
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <Label Text="MODIFICACIÓN MASIVA DE SENSORES" HorizontalOptions="CenterAndExpand" FontSize="Medium" />
+                    <Grid HorizontalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox x:Name="chkRebooted" Grid.Row="0" Grid.Column="0" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="Veces Reiniciado:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="0" Grid.Column="2" x:Name="txtRebooted" HorizontalOptions="FillAndExpand" MaxLength="5" Keyboard="Numeric" BackgroundColor="White" ></Entry>
+                    <CheckBox x:Name="chkSleepTime" Grid.Row="1" Grid.Column="0" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="Tiempo Dormido:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="1" Grid.Column="2" x:Name="txtSleepTime" HorizontalOptions="FillAndExpand" MaxLength="5" Keyboard="Numeric" BackgroundColor="White" ></Entry>
+                    <CheckBox x:Name="chkAdvTime" Grid.Row="2" Grid.Column="0" />
+                    <Label Grid.Row="2" Grid.Column="1" Text="Tiempo Adv:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="2" Grid.Column="2" x:Name="txtAdvTime" HorizontalOptions="FillAndExpand" MaxLength="5" Keyboard="Numeric" BackgroundColor="White"></Entry>
+                    <CheckBox x:Name="chkAdvQty" Grid.Row="3" Grid.Column="0" />
+                    <Label Grid.Row="3" Grid.Column="1" Text="Cantidad Adv:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="3" Grid.Column="2" x:Name="txtAdvQty" HorizontalOptions="FillAndExpand" MaxLength="5" Keyboard="Numeric" BackgroundColor="White"></Entry>
+                    <CheckBox x:Name="chkMacType" Grid.Row="4" Grid.Column="0" />
+                    <Label Grid.Row="4" Grid.Column="1" Text="Tipo de Mac:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Picker x:Name="MacType" Grid.Row="4" Grid.Column="2" BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>Original</x:String>
+                                <x:String>Custom</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    <CheckBox x:Name="chkSensor" Grid.Row="5" Grid.Column="0" />
+                    <Label Grid.Row="5" Grid.Column="1" Text="Tipo de Sensor:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Picker x:Name="cmbSensor" Grid.Row="5" Grid.Column="2" BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>Perno 120mm</x:String>
+                                <x:String>Esparrago 250</x:String>
+                                <x:String>Esparrago 200</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    <CheckBox x:Name="chkIntern" Grid.Row="6" Grid.Column="0" />
+                    <Label Grid.Row="6" Grid.Column="1" Text="Tipo de Interno:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Picker x:Name="cmbIntern" Grid.Row="6" Grid.Column="2" BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>6.2</x:String>
+                                <x:String>6.8</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    <CheckBox x:Name="chkBattery" Grid.Row="7" Grid.Column="0" />
+                    <Label Grid.Row="7" Grid.Column="1" Text="Tipo de Batería:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Picker x:Name="cmbBattery" Grid.Row="7" Grid.Column="2" BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>No/Rec</x:String>
+                                <x:String>Recargable</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    <CheckBox x:Name="chkOffset" Grid.Row="8" Grid.Column="0" />
+                    <Label Grid.Row="8" Grid.Column="1" Text="Offset:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="8" Grid.Column="2" x:Name="txtOffset" HorizontalOptions="FillAndExpand" BackgroundColor="White"></Entry>
+                    </Grid>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="btnSave" Text="Guardar" />
+                        <Button x:Name="btnClose" Text="Salir" />
+                    </StackLayout>
+                    <Label x:Name="Output"
+                       VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+</ContentPage>
+

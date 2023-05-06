@@ -1,0 +1,80 @@
+﻿<ContentPage x:Class="ADScan.Client.DeviceConfiguration"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Title="Configuración Dispositivo"
+             Visual="Material"
+             mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout Padding="10"
+                     Orientation="Vertical">
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <Label Text="Equipo: " />
+                    <Label Text="Versión Firmware: "/>
+                    <Grid HorizontalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Text="Veces Reiniciado:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="0" Grid.Column="1" x:Name="txtRebooted" HorizontalOptions="FillAndExpand" MaxLength="5" Keyboard="Numeric" BackgroundColor="White" ></Entry>
+                        <Label Grid.Row="1" Grid.Column="0" Text="Tiempo Dormido:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="1" Grid.Column="1" x:Name="txtSleepTime" HorizontalOptions="FillAndExpand" MaxLength="5" Keyboard="Numeric" BackgroundColor="White" ></Entry>
+                        <Label Grid.Row="2" Grid.Column="0" Text="Tiempo Adv:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="2" Grid.Column="1" x:Name="txtAdvTime" HorizontalOptions="FillAndExpand" MaxLength="5" Keyboard="Numeric" BackgroundColor="White"></Entry>
+                        <Label Grid.Row="3" Grid.Column="0" Text="Cantidad Adv:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="3" Grid.Column="1" x:Name="txtAdvQty" HorizontalOptions="FillAndExpand" MaxLength="5" Keyboard="Numeric" BackgroundColor="White"></Entry>
+                        <Label Grid.Row="4" Grid.Column="0" Text="MAC Custom:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="4" Grid.Column="1" x:Name="txtMacCustom" HorizontalOptions="FillAndExpand" MaxLength="12" IsEnabled="False" BackgroundColor="White"></Entry>
+                        <Label Grid.Row="5" Grid.Column="0" Text="MAC Original:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="5" Grid.Column="1" x:Name="txtMac" HorizontalOptions="FillAndExpand" IsEnabled="False" BackgroundColor="White"></Entry>
+                        <Label Grid.Row="6" Grid.Column="0" Text="Tipo de Mac:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Picker x:Name="MacType" Grid.Row="6" Grid.Column="1" BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>- Selecciona -</x:String>
+                                <x:String>Original</x:String>
+                                <x:String>Custom</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <Label Grid.Row="7" Grid.Column="0" Text="Tipo de Sensor:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Picker x:Name="cmbSensor" Grid.Row="7" Grid.Column="1" BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>- Selecciona -</x:String>
+                                <x:String>Perno 120mm</x:String>
+                                <x:String>Esparrago 250</x:String>
+                                <x:String>Esparrago 200</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <Label Grid.Row="8" Grid.Column="0" Text="Tipo de Interno:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Picker x:Name="cmbIntern" Grid.Row="8" Grid.Column="1" BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>- Selecciona -</x:String>
+                                <x:String>6.2</x:String>
+                                <x:String>6.8</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <Label Grid.Row="9" Grid.Column="0" Text="Tipo de Batería:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Picker x:Name="cmbBattery" Grid.Row="9" Grid.Column="1" BackgroundColor="White">
+                            <Picker.Items>
+                                <x:String>- Selecciona -</x:String>
+                                <x:String>No/Rec</x:String>
+                                <x:String>Recargable</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <Label Grid.Row="10" Grid.Column="0" Text="Offset:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        <Entry Grid.Row="10" Grid.Column="1" x:Name="txtOffset" HorizontalOptions="FillAndExpand" BackgroundColor="White"></Entry>
+                    </Grid>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="btnLoad" Text="Cargar" />
+                        <Button x:Name="btnSave" Text="Guardar" />
+                        <Button x:Name="btnDisconnect" Text="Desconectar" />
+                    </StackLayout>
+                    <Label x:Name="Output"
+                       VerticalOptions="CenterAndExpand" />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
