@@ -41,11 +41,13 @@
     <None Remove="Data\" />
     <None Remove="ViewModels\" />
     <None Remove="Workers\" />
+    <None Remove="Views\Server\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Workers\" />
+    <Folder Include="Views\Server\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Views\Filters\AddDeviceFilterPage.xaml.cs">

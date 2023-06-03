@@ -88,16 +88,17 @@ namespace ADScan.Client
                 }
                 catch (Exception e) { }
             }
-            else {
+            else
+            {
                 ScanButton.Text = "Escanear";
             }
 
             MessagingCenter.Unsubscribe<string>("DeviceAdvertised", "NewMessage");
 
-           MessagingCenter.Subscribe<string>("DeviceAdvertised", "NewMessage", async (sender) =>
-            {
-                await LoadData();
-            });
+            MessagingCenter.Subscribe<string>("DeviceAdvertised", "NewMessage", async (sender) =>
+             {
+                 await LoadData();
+             });
         }
 
         protected override void OnDisappearing()
@@ -189,11 +190,15 @@ namespace ADScan.Client
             }
 
             await database.ClearMessages();
+            await database.ClearMessagessServer();
 
             try {
 
                 string fileName = "LocalData.csv";
-                string filePath = DependencyService.Get<IFileAccessHelper>().GetLocalFilePath(fileName);
+                //string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); ;
+                ////var path = Path.Combine(libraryPath, sqliteFilename);
+                //string filePath = Path.Combine(libraryPath, fileName);
+                 string filePath = DependencyService.Get<IFileAccessHelper>().GetLocalFilePath(fileName);
                 var exportRows = new List<DataRow>();
 
 
@@ -448,6 +453,14 @@ namespace ADScan.Client
         private async Task SaveMessage(string name, string deviceAddress, string rawMessage)
         {
             await database.Persist<DeviceMessage>(new DeviceMessage() { 
+                CreatedOn = DateTime.Now,
+                Device = name,
+                MacAddress = deviceAddress,
+                Raw = rawMessage
+            });
+
+            await database.Persist<DeviceMessageList>(new DeviceMessageList()
+            {
                 CreatedOn = DateTime.Now,
                 Device = name,
                 MacAddress = deviceAddress,

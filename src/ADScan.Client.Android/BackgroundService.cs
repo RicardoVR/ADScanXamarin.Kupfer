@@ -337,6 +337,14 @@ namespace ADScan.Client.Droid
                     MacAddress = deviceAddress,
                     Raw = rawMessage
                 });
+
+                await database.Persist<DeviceMessageList>(new DeviceMessageList()
+                {
+                    CreatedOn = DateTime.Now,
+                    Device = name,
+                    MacAddress = deviceAddress,
+                    Raw = rawMessage
+                });
             }
         }
 

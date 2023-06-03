@@ -21,6 +21,7 @@ namespace ADScan.Client.Data
             await Database.CreateTableAsync<Models.Filter>();
             await Database.CreateTableAsync<Models.FilterDevice>();
             await Database.CreateTableAsync<Models.DeviceMessage>();
+            await Database.CreateTableAsync<Models.DeviceMessageList>();
 
             return instance;
         });
@@ -182,6 +183,20 @@ namespace ADScan.Client.Data
             try
             {
                 await Database.DeleteAllAsync<DeviceMessage>();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+        public async Task<bool> ClearMessagessServer()
+        {
+            try
+            {
+                await Database.DeleteAllAsync<DeviceMessageList>();
                 return true;
             }
             catch (Exception ex)

@@ -1,5 +1,8 @@
 ﻿using Foundation;
 using UIKit;
+using SQLite;
+using Xamarin.Forms;
+using ADScan.Client.Renderers;
 
 namespace ADScan.Client.iOS
 {
@@ -10,6 +13,11 @@ namespace ADScan.Client.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
+            Xamarin.Forms.DependencyService.Register<IFileAccessHelper>();
+            Xamarin.Forms.DependencyService.Register<IBackgroundService>();
+            
+
+          //  DependencyService.Register<IFileAccessHelper, DeviceOrientationService>();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

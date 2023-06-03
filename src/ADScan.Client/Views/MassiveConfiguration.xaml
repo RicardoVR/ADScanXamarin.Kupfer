@@ -33,7 +33,7 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="auto"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                <Entry x:Name="txtMac" HorizontalOptions="FillAndExpand" Grid.Column="0" MaxLength="18" Text="{Binding Mac, Mode=TwoWay}" />
+                <Entry x:Name="txtMac" HorizontalOptions="FillAndExpand" Grid.Column="0" MaxLength="30" Text="{Binding Mac, Mode=TwoWay}" />
                 <Button x:Name="btnAdd" Text="AGREGAR" Grid.Column="1" Command="{Binding AddDeviceCommand}"></Button>
                 </Grid>
         </StackLayout>

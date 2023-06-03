@@ -112,7 +112,9 @@
   <ItemGroup>
     <Compile Include="BackgroundService.cs" />
     <Compile Include="BackgroundServiceImplementation.cs" />
-    <Compile Include="FileAccessHelper.cs" />
+    <Compile Include="FileAccessHelper.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

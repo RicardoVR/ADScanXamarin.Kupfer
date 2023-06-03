@@ -66,6 +66,10 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include=".DS_Store" />
+    <Compile Include="FileAccessHelper.cs" />
+    <None Include="smartidler.imageset\.DS_Store" />
+    <Compile Include="BackgroundService.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -111,6 +115,40 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\.DS_Store" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\add.imageset\add.png" />
+    <ImageAsset Include="Assets.xcassets\add.imageset\add%402x.png" />
+    <ImageAsset Include="Assets.xcassets\add.imageset\add%403x.png" />
+    <ImageAsset Include="Assets.xcassets\add.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\smartwear.imageset\smartwear%403x.png" />
+    <ImageAsset Include="Assets.xcassets\smartwear.imageset\smartwear%402x.png" />
+    <ImageAsset Include="Assets.xcassets\smartwear.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\smartwear.imageset\smartwear.png" />
+    <ImageAsset Include="Assets.xcassets\smartr.imageset\smartr%403x.png" />
+    <ImageAsset Include="Assets.xcassets\smartr.imageset\smartr.png" />
+    <ImageAsset Include="Assets.xcassets\smartr.imageset\smartr%402x.png" />
+    <ImageAsset Include="Assets.xcassets\smartr.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\tinytemp.imageset\tinytemp.png" />
+    <ImageAsset Include="Assets.xcassets\tinytemp.imageset\tinytemp%402x.png" />
+    <ImageAsset Include="Assets.xcassets\tinytemp.imageset\tinytemp%403x.png" />
+    <ImageAsset Include="Assets.xcassets\tinytemp.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\smartwasher.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\smartwasher.imageset\smartwasher%403x.png" />
+    <ImageAsset Include="Assets.xcassets\smartwasher.imageset\smartwasher.png" />
+    <ImageAsset Include="Assets.xcassets\smartwasher.imageset\smartwasher%402x.png" />
+    <ImageAsset Include="Assets.xcassets\server.imageset\server.png" />
+    <ImageAsset Include="Assets.xcassets\server.imageset\server%403x.png" />
+    <ImageAsset Include="Assets.xcassets\server.imageset\server%402x.png" />
+    <ImageAsset Include="Assets.xcassets\server.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\smartidler.imageset\smartidler.png" />
+    <ImageAsset Include="Assets.xcassets\smartidler.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\smartidler.imageset\smartidler%402x.png" />
+    <ImageAsset Include="Assets.xcassets\smartidler.imageset\smartidler%403x.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\logo%403x.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\logo.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\logo%402x.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -154,5 +192,11 @@
       <Project>{742F3DD7-FADD-4BB5-AD28-8508B64D9D95}</Project>
       <Name>ADScan.Client</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="smartidler.imageset\smartidler.png" />
+    <BundleResource Include="smartidler.imageset\Contents.json" />
+    <BundleResource Include="smartidler.imageset\smartidler%402x.png" />
+    <BundleResource Include="smartidler.imageset\smartidler%403x.png" />
   </ItemGroup>
 </Project>

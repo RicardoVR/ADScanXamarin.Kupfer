@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using XamarinEssentials = Xamarin.Essentials;
 using System.Linq;
 using Xamarin.Essentials;
+using ADScan.Client.Views.Server;
 
 namespace ADScan.Client
 {
@@ -19,13 +20,19 @@ namespace ADScan.Client
         public MainPage()
         {
             InitializeComponent();
-
+            //btnSmartServer
             btnSmartWear.Clicked += BtnSmartWear_Clicked;
+            btnSmartServer.Clicked += BtnSmartServer_Clicked;
         }
 
         private async void BtnSmartWear_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new DevicesList());
+        }
+
+        private async void BtnSmartServer_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ServerPage());
         }
 
         protected async override void OnAppearing()
