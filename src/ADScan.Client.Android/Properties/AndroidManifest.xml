@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="17" android:versionName="1.0.17" package="adscan.client.droid" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="17" android:versionName="1.0.18" package="adscan.client.droid" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="33" />
 	<application android:label="ADScan.Client.Android" android:debuggable="true" android:icon="@mipmap/launcher_foreground" android:usesCleartextTraffic="true" android:requestLegacyExternalStorage="true">
 		<service android:name=".BackgroundService" android:stopWithTask="false" />
