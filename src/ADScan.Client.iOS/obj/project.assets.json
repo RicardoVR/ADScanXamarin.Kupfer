@@ -2556,32 +2556,39 @@
     ]
   },
   "packageFolders": {
-    "/Users/deepakjain/.nuget/packages/": {}
+    "C:\\Users\\rvasq\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client.iOS/ADScan.Client.iOS.csproj",
+      "projectUniqueName": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client.iOS\\ADScan.Client.iOS.csproj",
       "projectName": "Jenx.Bluetooth.UartOverGatt.Client.iOS",
-      "projectPath": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client.iOS/ADScan.Client.iOS.csproj",
-      "packagesPath": "/Users/deepakjain/.nuget/packages/",
-      "outputPath": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client.iOS/obj/",
+      "projectPath": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client.iOS\\ADScan.Client.iOS.csproj",
+      "packagesPath": "C:\\Users\\rvasq\\.nuget\\packages\\",
+      "outputPath": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/deepakjain/.config/NuGet/NuGet.Config"
+        "C:\\Users\\rvasq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client/ADScan.Client.csproj": {
-              "projectPath": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client/ADScan.Client.csproj"
+            "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client\\ADScan.Client.csproj": {
+              "projectPath": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client\\ADScan.Client.csproj"
             }
           }
         }

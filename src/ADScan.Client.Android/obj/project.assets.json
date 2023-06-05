@@ -6447,32 +6447,39 @@
     ]
   },
   "packageFolders": {
-    "/Users/deepakjain/.nuget/packages/": {}
+    "C:\\Users\\rvasq\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client.Android/ADScan.Client.Android.csproj",
+      "projectUniqueName": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client.Android\\ADScan.Client.Android.csproj",
       "projectName": "ADScan.Client.Android",
-      "projectPath": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client.Android/ADScan.Client.Android.csproj",
-      "packagesPath": "/Users/deepakjain/.nuget/packages/",
-      "outputPath": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client.Android/obj/",
+      "projectPath": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client.Android\\ADScan.Client.Android.csproj",
+      "packagesPath": "C:\\Users\\rvasq\\.nuget\\packages\\",
+      "outputPath": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/deepakjain/.config/NuGet/NuGet.Config"
+        "C:\\Users\\rvasq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid13.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client/ADScan.Client.csproj": {
-              "projectPath": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client/ADScan.Client.csproj"
+            "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client\\ADScan.Client.csproj": {
+              "projectPath": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client\\ADScan.Client.csproj"
             }
           }
         }
@@ -6574,7 +6581,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Xamarin.Forms 5.0.0.2515 requires Xamarin.AndroidX.Core (>= 1.6.0.1 && <= 1.7.0.2) but version Xamarin.AndroidX.Core 1.9.0 was resolved.",
+      "message": "Se detectó una versión del paquete fuera de la restricción de dependencia: Xamarin.Forms 5.0.0.2515 requiere Xamarin.AndroidX.Core (>= 1.6.0.1 && <= 1.7.0.2), pero la versión Xamarin.AndroidX.Core 1.9.0 ya se resolvió.",
       "libraryId": "Xamarin.AndroidX.Core",
       "targetGraphs": [
         "MonoAndroid,Version=v13.0"

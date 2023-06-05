@@ -26,7 +26,7 @@
                         <ColumnDefinition Width="auto"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                 <Entry x:Name="txtServer" IsReadOnly="True" HorizontalOptions="FillAndExpand" Grid.Column="0" MaxLength="18" Text="{Binding Mac, Mode=TwoWay}" />
-                <Button x:Name="btnAddress" Text="Guardar"  BackgroundColor="#5b9cd5" Grid.Column="1" Command="{Binding AddDeviceCommand}"></Button>
+                <Button x:Name="btnAddress" Text="Guardar" TextColor="White"  BackgroundColor="BLACK" Grid.Column="1" Command="{Binding AddDeviceCommand}"></Button>
                 </Grid>
                <ActivityIndicator
             x:Name="ai"
@@ -36,7 +36,7 @@
             Color="Black"/>
                <Label x:Name="txtLength" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
         </StackLayout>
-             <Button Grid.Row="2" x:Name="btnAdd"  BackgroundColor="#5b9cd5"  VerticalOptions="FillAndExpand" Text="Envió de Datos"/>
+            <Button Grid.Row="2" x:Name="btnAdd" TextColor="White"  BackgroundColor="BLACK"  VerticalOptions="FillAndExpand" Text="Envió de Datos"/>
             <AbsoluteLayout>
     <StackLayout
         x:Name="mainLayout"

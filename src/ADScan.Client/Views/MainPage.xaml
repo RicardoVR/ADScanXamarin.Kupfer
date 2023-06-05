@@ -23,12 +23,12 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <ImageButton x:Name="btnSmartWear" Aspect="AspectFit"  Margin="5" Source="smartwear.png" Grid.Row="0" Grid.Column="0" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="Blue" CornerRadius="5" Padding="5" />
-        <ImageButton Aspect="AspectFit" Source="smartidler.png" Margin="5" Grid.Row="0" Grid.Column="1" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="Blue" CornerRadius="5" Padding="5" Opacity=".5" />
-        <ImageButton Aspect="AspectFit" Source="smartr.png" Grid.Row="0" Margin="5" Grid.Column="2" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="Blue" CornerRadius="5" Padding="5" Opacity=".5" />
-         <ImageButton Aspect="AspectFit"  Margin="5" Source="smartwasher.png" Grid.Row="1" Grid.Column="0" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="Blue" CornerRadius="5" Padding="5"  Opacity=".5" />
-        <ImageButton Aspect="AspectFit" Source="tinytemp.png" Margin="5" Grid.Row="1" Grid.Column="1" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="Blue" CornerRadius="5" Padding="5" Opacity=".5" />
-        <ImageButton x:Name="btnSmartServer" Aspect="AspectFit" Source="server.png" Grid.Row="1" Margin="5" Grid.Column="2" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="Blue" CornerRadius="5" Padding="5" Opacity=".5" />
+        <ImageButton x:Name="btnSmartWear" Aspect="AspectFit"  Margin="5" Source="smartwear.png" Grid.Row="0" Grid.Column="0" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="black" CornerRadius="5" Padding="5" />
+        <!-- <ImageButton Aspect="AspectFit" Source="smartidler.png" Margin="5" Grid.Row="0" Grid.Column="1" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="black" CornerRadius="5" Padding="5" Opacity=".5" /> -->
+        <!-- <ImageButton Aspect="AspectFit" Source="smartr.png" Grid.Row="0" Margin="5" Grid.Column="2" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="black" CornerRadius="5" Padding="5" Opacity=".5" /> -->
+        <!--    <ImageButton Aspect="AspectFit"  Margin="5" Source="smartwasher.png" Grid.Row="1" Grid.Column="0" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="black" CornerRadius="5" Padding="5"  Opacity=".5" /> -->
+        <!-- <ImageButton Aspect="AspectFit" Source="tinytemp.png" Margin="5" Grid.Row="1" Grid.Column="1" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="black" CornerRadius="5" Padding="5" Opacity=".5" /> -->
+        <ImageButton x:Name="btnSmartServer" Aspect="AspectFit" Source="server.png" Grid.Row="0" Margin="5" Grid.Column="1" BorderWidth="1" HeightRequest="100" WidthRequest="70" BackgroundColor="White" BorderColor="black" CornerRadius="5" Padding="5" />
         <StackLayout Grid.Row="2" Grid.ColumnSpan="3">
             <Label x:Name="lblVersionTag" HorizontalOptions="CenterAndExpand" Text="Version"></Label>
             <Label x:Name="lblVersion" HorizontalOptions="CenterAndExpand" Text="0.0.0"></Label>

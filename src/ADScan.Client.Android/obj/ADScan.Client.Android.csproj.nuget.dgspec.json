@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client.Android/ADScan.Client.Android.csproj": {}
+    "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client.Android\\ADScan.Client.Android.csproj": {}
   },
   "projects": {
-    "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client.Android/ADScan.Client.Android.csproj": {
+    "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client.Android\\ADScan.Client.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client.Android/ADScan.Client.Android.csproj",
+        "projectUniqueName": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client.Android\\ADScan.Client.Android.csproj",
         "projectName": "ADScan.Client.Android",
-        "projectPath": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client.Android/ADScan.Client.Android.csproj",
-        "packagesPath": "/Users/deepakjain/.nuget/packages/",
-        "outputPath": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client.Android/obj/",
+        "projectPath": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client.Android\\ADScan.Client.Android.csproj",
+        "packagesPath": "C:\\Users\\rvasq\\.nuget\\packages\\",
+        "outputPath": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/deepakjain/.config/NuGet/NuGet.Config"
+          "C:\\Users\\rvasq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "monoandroid13.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "monoandroid13.0": {
             "projectReferences": {
-              "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client/ADScan.Client.csproj": {
-                "projectPath": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client/ADScan.Client.csproj"
+              "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client\\ADScan.Client.csproj": {
+                "projectPath": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client\\ADScan.Client.csproj"
               }
             }
           }
@@ -124,22 +130,29 @@
         }
       }
     },
-    "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client/ADScan.Client.csproj": {
+    "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client\\ADScan.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client/ADScan.Client.csproj",
+        "projectUniqueName": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client\\ADScan.Client.csproj",
         "projectName": "ADScan.Client",
-        "projectPath": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client/ADScan.Client.csproj",
-        "packagesPath": "/Users/deepakjain/.nuget/packages/",
-        "outputPath": "/Users/deepakjain/Desktop/ERDIG/freelance/ADScanXamarin.Kupfer-main/src/ADScan.Client/obj/",
+        "projectPath": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client\\ADScan.Client.csproj",
+        "packagesPath": "C:\\Users\\rvasq\\.nuget\\packages\\",
+        "outputPath": "C:\\github\\ADScanXamarin.Kupfer\\src\\ADScan.Client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/deepakjain/.config/NuGet/NuGet.Config"
+          "C:\\Users\\rvasq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -211,11 +224,12 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/Users/deepakjain/Library/Caches/VisualStudio/17.0/MSBuild/17200_3/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
