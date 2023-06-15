@@ -47,7 +47,8 @@
                                 <x:String>Perno 120mm</x:String>
                                 <x:String>Esparrago 250</x:String>
                                 <x:String>Esparrago 200</x:String>
-                            </Picker.Items>
+                                <x:String>Esparrago 110 1.3mm</x:String>
+                        </Picker.Items>
                         </Picker>
                     <CheckBox x:Name="chkIntern" Grid.Row="6" Grid.Column="0" />
                     <Label Grid.Row="6" Grid.Column="1" Text="Tipo de Interno:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
@@ -68,7 +69,10 @@
                     <CheckBox x:Name="chkOffset" Grid.Row="8" Grid.Column="0" />
                     <Label Grid.Row="8" Grid.Column="1" Text="Offset:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
                         <Entry Grid.Row="8" Grid.Column="2" x:Name="txtOffset" HorizontalOptions="FillAndExpand" BackgroundColor="White"></Entry>
-                    </Grid>
+                    <CheckBox x:Name="chkcutsensor" Grid.Row="9" Grid.Column="0" />
+                    <Label Grid.Row="9" Grid.Column="1" Text="Offset:" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Entry Grid.Row="9" Grid.Column="2" x:Name="txtcutsensor" HorizontalOptions="FillAndExpand" BackgroundColor="White"></Entry>
+                </Grid>
                     <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
                         <Button x:Name="btnSave" Text="Guardar" />
                         <Button x:Name="btnClose" Text="Salir" />

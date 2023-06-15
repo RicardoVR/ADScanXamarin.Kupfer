@@ -182,6 +182,7 @@ namespace ADScan.Client
             var intern = Preferences.Get("intern", "");
             var battery = Preferences.Get("battery", "");
             var offset = Preferences.Get("offset", "");
+            var cutsensor = Preferences.Get("cutsensor", "");
 
             txtRebooted.Text = rebooted;
             txtSleepTime.Text = sleepTime;
@@ -194,6 +195,7 @@ namespace ADScan.Client
             cmbIntern.SelectedItem = intern;
             cmbBattery.SelectedItem = battery;
             txtOffset.Text = offset;
+            txtcutsensor.Text = cutsensor;
         }
 
         private void SaveConfiguration() {
@@ -208,6 +210,7 @@ namespace ADScan.Client
             var intern= cmbIntern.SelectedItem.ToString();
             var battery= cmbBattery.SelectedItem.ToString();
             var offset= txtOffset.Text;
+            var cutsensor = txtcutsensor.Text;
 
 
             Preferences.Set("rebooted", rebooted);
@@ -221,6 +224,7 @@ namespace ADScan.Client
             Preferences.Set("intern", intern);
             Preferences.Set("battery", battery);
             Preferences.Set("offset", offset);
+            Preferences.Set("cutsensor", cutsensor);
         }
 
         private async Task SendConfiguration()
@@ -277,14 +281,33 @@ namespace ADScan.Client
                     {
                         await SendCommand("3010");
                     }
-                    else if (sensor == "Esparrago 250")
+
+                    else if(sensor == "Esparrago 250")
                     {
                         await SendCommand("3011");
                     }
-                    else
+
+                    else if(sensor == "Esparrago 200")
                     {
                         await SendCommand("3012");
                     }
+
+                    else if(sensor == "Esparrago 110 1.3mm")
+                    {
+                        await SendCommand("3013");
+                    }
+
+                    else
+                        await SendCommand("3010");
+
+                    //else if (sensor == "Esparrago 250")
+                    //{
+                    //    await SendCommand("3011");
+                    //}
+                    //else
+                    //{
+                    //    await SendCommand("3012");
+                    //}
                 }
 
                 // Intern
@@ -322,7 +345,7 @@ namespace ADScan.Client
 
                 int intValue = int.TryParse(offset, out intValue) ? intValue : 0;
 
-              
+
                 if (intValue > -128 && intValue < 128)
                 {
                     //int newValue = intValue + 128;
@@ -333,9 +356,31 @@ namespace ADScan.Client
                     string newValue_OFFSET = newValue.ToString().PadLeft(3, '0');
                     await SendCommand("50" + newValue_OFFSET);
 
-                    //await SendCommand(message);
+                    
                 }
-            }catch (Exception ex)
+
+                // Offset
+                var cutsensor = txtcutsensor.Text;
+
+                int intValue1 = int.TryParse(cutsensor, out intValue1) ? intValue1 : 0;
+                if (intValue1 >= 0 && intValue1 <= 255)
+                {
+
+                    int newValue1 = intValue1;
+
+                    string newValue1_cutsensor = newValue1.ToString().PadLeft(3, '0');
+                    await SendCommand("51" + newValue1_cutsensor);
+
+                  
+                }
+
+
+
+
+
+
+            }
+            catch (Exception ex)
             {
 
             }
@@ -408,14 +453,19 @@ namespace ADScan.Client
                     if (value == "10") {
                         cmbSensor.SelectedItem = "Perno 120mm";
                     }
-
-                    if (value == "12") {
-                        cmbSensor.SelectedItem = "Esparrago 200";
-                    }
-
                     if (value == "11") {
                         cmbSensor.SelectedItem = "Esparrago 250";
                     }
+                    if (value == "12")
+                    {
+                        cmbSensor.SelectedItem = "Esparrago 200";
+                    }
+                    if (value == "13")
+                    {
+                        cmbSensor.SelectedItem = "Esparrago 110 1.3mm";
+                    }
+
+                        
                     break;
                 case "31":
 
@@ -448,7 +498,11 @@ namespace ADScan.Client
                     var offData = ParseHex(value);
                     txtOffset.Text = Convert.ToInt32(offData - 128).ToString();
                     break;
+                case "51":
 
+                    var offData1 = ParseHex(value);
+                    txtcutsensor.Text = Convert.ToInt32(offData1).ToString();
+                    break;
 
                 default:
                     break;

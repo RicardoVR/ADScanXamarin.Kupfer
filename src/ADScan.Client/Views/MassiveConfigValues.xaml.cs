@@ -97,16 +97,23 @@ namespace ADScan.Client.Views
                     {
                         cmbSensor.SelectedItem = "Perno 120mm";
                     }
-                    else if (dt.Value == "30")
+                    if (dt.Value == "11")
                     {
-                        cmbSensor.SelectedItem = "Esparrago 250";
+                        cmbSensor.SelectedItem = "Perno 250mm";
                     }
-                    else
+                    if (dt.Value == "12")
                     {
-                        cmbSensor.SelectedItem = "Esparrago 200";
+                        cmbSensor.SelectedItem = "Perno 200mm";
                     }
+                    if (dt.Value == "13")
+                    {
+                        cmbSensor.SelectedItem = "Esparrago 110 1.3mm";
+                    }
+
                 }
 
+
+               
                 // Intern
 
                 if (dt.Index == "31")
@@ -142,6 +149,11 @@ namespace ADScan.Client.Views
                 {
                     chkOffset.IsChecked = true;
                     txtOffset.Text = dt.Value;
+                }
+                if (dt.Index == "51")
+                {
+                    chkcutsensor.IsChecked = true;
+                    txtcutsensor.Text = dt.Value;
                 }
             }
         }
@@ -222,6 +234,20 @@ namespace ADScan.Client.Views
 
                 await SaveValue("50", intValue.ToString(), chkOffset.IsChecked);
             }
+
+
+            // sensorcut
+            var sensorcut = txtcutsensor.Text;
+
+            int intValue1 = int.TryParse(sensorcut, out intValue1) ? intValue1 : 0;
+
+            if (intValue1 > 0 && intValue1 < 255)
+            {
+
+                await SaveValue("51", intValue1.ToString(), chkOffset.IsChecked);
+            }
+
+
         }
 
         private async Task SaveValue(string index, string value, bool enabled)

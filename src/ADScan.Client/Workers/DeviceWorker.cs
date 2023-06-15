@@ -224,14 +224,23 @@ namespace ADScan.Client.Workers
                         {
                             await SendCommand("3010");
                         }
-                        else if (sensor == "Esparrago 250" || sensor == "30")
+
+                        if(sensor == "Perno 250mm" || sensor == "11")
                         {
-                            await SendCommand("3030");
+                            await SendCommand("3011");
                         }
-                        else
+
+                        if(sensor == "Perno 200" || sensor == "12")
                         {
-                            await SendCommand("3020");
+                            await SendCommand("3012");
                         }
+
+                        if (sensor == "Esparrago 110 1.3mm" || sensor == "13")
+                        {
+                            await SendCommand("3013");
+                        }
+                        
+                  
                     }
 
                     // Intern
