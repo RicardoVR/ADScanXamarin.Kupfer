@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ADScan.Client.Views.MassiveConfigValues.xaml", "Views/MassiveConfigValues.xaml", typeof(global::ADScan.Client.Views.MassiveConfigValues))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("KupferIOT.Client.Views.MassiveConfigValues.xaml", "Views/MassiveConfigValues.xaml", typeof(global::ADScan.Client.Views.MassiveConfigValues))]
 
 namespace ADScan.Client.Views {
     

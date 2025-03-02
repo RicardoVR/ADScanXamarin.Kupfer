@@ -29,13 +29,6 @@ corners;C:\github\ADScanXamarin.Kupfer\src\ADScan.Client.Android\obj\Release\130
 corners;obj\Release\130\res\drawable\customborder.xml
 corners;obj\Release\130\res\drawable\imageview_red_border.xml
 corners;obj\Release\130\res\drawable\my_button_bg.xml
-crc642e1c7a98bdb5c44a.AutoFitTextureView;C:\github\ADScanXamarin.Kupfer\src\ADScan.Client.Android\obj\Release\130\lp\72\jl\res\layout\camerafragment.xml
-crc643f46942d9dd1fff9.ShellFlyoutLayout;C:\github\ADScanXamarin.Kupfer\src\ADScan.Client.Android\obj\Release\130\lp\75\jl\res\layout\flyoutcontent.xml
-crc64720bb2db43a66fe9.FormsViewPager;C:\github\ADScanXamarin.Kupfer\src\ADScan.Client.Android\obj\Release\130\lp\75\jl\res\layout\rootlayout.xml
-crc647c4c06b10f3352ff.MaterialFormsEditText;C:\github\ADScanXamarin.Kupfer\src\ADScan.Client.Android\obj\Release\130\lp\74\jl\res\layout\textinputlayoutfilledbox.xml
-crc647c4c06b10f3352ff.MaterialFormsTextInputLayout;C:\github\ADScanXamarin.Kupfer\src\ADScan.Client.Android\obj\Release\130\lp\74\jl\res\layout\textinputlayoutfilledbox.xml
-crc647c4c06b10f3352ff.MaterialPickerEditText;C:\github\ADScanXamarin.Kupfer\src\ADScan.Client.Android\obj\Release\130\lp\74\jl\res\layout\materialpickertextinput.xml
-crc647c4c06b10f3352ff.MaterialPickerTextInputLayout;C:\github\ADScanXamarin.Kupfer\src\ADScan.Client.Android\obj\Release\130\lp\74\jl\res\layout\materialpickertextinput.xml
 declare-styleable;C:\github\ADScanXamarin.Kupfer\src\ADScan.Client.Android\obj\Release\130\lp\1\jl\res\values\attrs.xml
 declare-styleable;C:\github\ADScanXamarin.Kupfer\src\ADScan.Client.Android\obj\Release\130\lp\75\jl\res\values\attrs.xml
 domain;obj\Release\130\res\xml\network_security_config.xml

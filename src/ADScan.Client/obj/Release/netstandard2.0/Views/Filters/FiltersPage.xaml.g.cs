@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ADScan.Client.Views.Filters.FiltersPage.xaml", "Views/Filters/FiltersPage.xaml", typeof(global::ADScan.Client.Views.FiltersPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("KupferIOT.Client.Views.Filters.FiltersPage.xaml", "Views/Filters/FiltersPage.xaml", typeof(global::ADScan.Client.Views.FiltersPage))]
 
 namespace ADScan.Client.Views {
     

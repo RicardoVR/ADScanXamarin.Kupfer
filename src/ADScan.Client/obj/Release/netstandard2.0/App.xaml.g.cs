@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ADScan.Client.App.xaml", "App.xaml", typeof(global::ADScan.Client.App))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("KupferIOT.Client.App.xaml", "App.xaml", typeof(global::ADScan.Client.App))]
 
 namespace ADScan.Client {
     
